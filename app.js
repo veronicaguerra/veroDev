@@ -5,7 +5,7 @@ let nombrePrompt = prompt("Ingrese su nombre");
 console.log(nombrePrompt);
 
 alert(nombrePrompt);
-*/
+
 
 // tres formas de crear objetos
 
@@ -96,3 +96,22 @@ fill(222, 62, 13);
 ellipse(197,174,40,40);
 fill(222, 62, 13);
 ellipse(250,229,40,40);*/
+
+class Rectangulo {
+    constructor (alto, ancho) {
+      this.alto = alto;
+      this.ancho = ancho;
+    }
+    // Getter
+    get area() {
+       return this.calcArea();
+     }
+    // Método
+    calcArea () {
+      return this.alto * this.ancho;
+    }
+  }
+  
+  const cuadrado = new Rectangulo(10, 10);
+  
+  console.log(cuadrado.area); // 100
